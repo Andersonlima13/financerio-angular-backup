@@ -1,0 +1,22 @@
+<div class="create-account-container flex p-6 w-full h-full justify-center items-center">
+
+    <div class="container flex gap-8 h-fit">
+        <div [formGroup]="accountForm" class="left-section flex flex-col flex-1 gap-y-4">
+            <h1 class="text-[72px] font-bold">Take Control of <span class="text-customHsl-accent">Your Money</span></h1>
+            <p class="text-2xl">Personal budgeting is the secret to financial freedom. Start your journey today.</p>
+            <input formControlName="name" class="input-select" type="text" placeholder="Enter account name">
+
+            <button [disabled]="accountForm.invalid" (click)="createAccount()" class="btn bg-customHsl-text text-white border-none w-fit text-[19px]">
+                Create Account
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+                    fill="currentColor" aria-hidden="true" width="20">
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+        <div class="right-section flex-1">
+            <img src="assets/budgeting_set_2.jpg" alt="" srcset="">
+        </div>
+    </div>
+
+    <img class="absolute bottom-8 right-[10%] w-[200px] h-[200px]" src="assets/qrcode.png" />
+</div>
